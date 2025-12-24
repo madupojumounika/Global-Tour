@@ -20,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const appId = 'global-tour-pro-v2';
-const apiKey = 'AIzaSyCk9Xkd2iyoMPT4h29EXPrXVAHoubUuzKc'; // optional Gemini API key
+const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
 function App() {
   const [user, setUser] = useState(null);
