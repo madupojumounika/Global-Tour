@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { initializeApp } from 'firebase/app';
 import {
@@ -158,11 +157,9 @@ const res = await fetch(
   }
 };
 
-  // Scroll chat to bottom
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [aiMessages]);
-  // Open map automatically when user asks for Alleppey map in chat
 useEffect(() => {
   const last = aiMessages[aiMessages.length - 1];
   if (!last || last.role !== 'user') return;
@@ -273,7 +270,6 @@ useEffect(() => {
       </header>
 
       <main>
-        {/* HOME HERO */}
         {activeTab === 'home' && (
           <section className="relative h-[750px] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0">
@@ -323,7 +319,6 @@ useEffect(() => {
           </section>
         )}
 
-        {/* EXPLORE */}
         {(activeTab === 'explore' || activeTab === 'home') && (
           <div className="max-w-7xl mx-auto px-6 py-20" ref={exploreRef}>
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">
@@ -408,8 +403,7 @@ useEffect(() => {
             )}
           </div>
         )}
-
-        {/* ITINERARY */}
+        
         {activeTab === 'itinerary' && (
           <div className="max-w-5xl mx-auto px-6 py-20">
             <h2 className="text-5xl font-black uppercase mb-12 tracking-tighter text-slate-50">
@@ -470,7 +464,7 @@ useEffect(() => {
         )}
       </main>
 
-      {/* AI ASSISTANT */}
+      {/* AI ASSISTANT  */}
       <div className="fixed bottom-8 right-8 z-[200] flex flex-col items-end gap-4">
         {aiOpen && (
           <div className="bg-slate-950 w-[350px] md:w-[400px] h-[500px] rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col border border-slate-800">
