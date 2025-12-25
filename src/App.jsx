@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useEffect, useState } from 'react';
 import Home from './pages/Home';
 import Explore from './pages/Explore';

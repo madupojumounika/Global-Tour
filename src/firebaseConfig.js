@@ -1,4 +1,3 @@
-// Replace with your real Firebase config from Firebase Console.
 export const firebaseConfig = {
   apiKey: "YOUR_FIREBASE_API_KEY",
   authDomain: "YOUR_PROJECT_ID.firebaseapp.com",

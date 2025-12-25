@@ -1,4 +1,3 @@
-// src/constants/packages.js
 export const PACKAGES = [
   // Asia
   { id: 'p1', title: 'Grand Japan Cherry Blossom', location: 'Tokyo, Osaka, Kyoto', category: 'International', type: 'Culture', days: '8 Days', price: 1499, image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80', rating: 4.9, coordinates: [139.65, 35.67] },
