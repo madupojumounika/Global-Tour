@@ -25,7 +25,6 @@ export const PACKAGES = [
 
   // India 
   { id: 'p5', title: 'Majestic Manali Heights', location: 'Himachal, India', category: 'Domestic', type: 'Adventure', days: '5 Days', price: 350, image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80', rating: 4.9, coordinates: [77.18, 32.24] },
-  { id: 'p6', title: 'Royal Rajasthan Heritage', location: 'Jaipur, India', category: 'Domestic', type: 'History', days: '6 Days', price: 480, image: 'https://images.unsplash.com/photo-1524492707947-2f85a6e50311?auto=format&fit=crop&w=800&q=80', rating: 4.8, coordinates: [75.78, 26.91] },
   { id: 'p7', title: 'Kerala Backwater Serenity', location: 'Alleppey, India', category: 'Domestic', type: 'Nature', days: '4 Days', price: 299, image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80', rating: 4.7, coordinates: [76.33, 9.49] },
   { id: 'p20', title: 'Ladakh High Pass Trek', location: 'Ladakh, India', category: 'Domestic', type: 'Adventure', days: '7 Days', price: 550, image: 'https://images.unsplash.com/photo-1581791534721-e599df4417f7?auto=format&fit=crop&w=800&q=80', rating: 4.9, coordinates: [77.57, 34.15] }
 ];
