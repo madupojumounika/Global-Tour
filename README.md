@@ -48,14 +48,10 @@ src/
 │   App.css
 │   App.js
 │   App.jsx
-│   App.test.js
 │   firebaseConfig.js
 │   index.css
 │   index.js
-│   logo.svg
-│   reportWebVitals.js
-│   setupTests.js
-│
+|
 ├───components
 │       PackageCard.jsx
 │
