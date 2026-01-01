@@ -3,23 +3,23 @@ import { MapPin, Star, Map as MapIcon, Loader2, ArrowRight } from 'lucide-react'
 
 function PackageCard({ pkg, onBook, onViewMap, isLoading }) {
   return (
-    <div className="group bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 hover:border-blue-500/60 hover:shadow-blue-500/20 hover:shadow-2xl transition-all h-full flex flex-col">
+    <div className="group bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 hover:border-blue-500/60 hover:shadow-blue-500/20 hover:shadow-2xl transition-all flex flex-col h-full">
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={pkg.image}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           alt={pkg.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
 
         {/* Type & Days */}
         <div className="absolute top-4 left-4 flex flex-col gap-2">
-          <span className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[9px] font-black uppercase shadow-sm inline-block text-slate-900">
+          <span className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[9px] font-black uppercase shadow-sm text-slate-900">
             {pkg.type}
           </span>
-          <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase shadow-sm inline-block">
-            {pkg.days}
+          <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase shadow-sm">
+            {pkg.days} Days
           </span>
         </div>
 
@@ -46,15 +46,13 @@ function PackageCard({ pkg, onBook, onViewMap, isLoading }) {
         </div>
 
         {/* Title & Location */}
-        <h4 className="text-lg font-black text-slate-50 mb-1 leading-tight">
-          {pkg.title}
-        </h4>
+        <h4 className="text-lg font-black text-slate-50 mb-1 leading-tight">{pkg.title}</h4>
         <p className="text-slate-400 font-medium text-xs mb-6">
           <MapPin size={11} className="inline mr-1" />
           {pkg.location}
         </p>
 
-        {/* Centered Gradient Book Button */}
+        {/* Book Button */}
         <div className="mt-auto flex justify-center pt-4 border-t border-slate-800">
           <button
             onClick={() => onBook(pkg)}
