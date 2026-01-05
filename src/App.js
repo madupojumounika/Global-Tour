@@ -1,24 +1,36 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { initializeApp } from 'firebase/app';
-import {
-  getFirestore, collection, addDoc, onSnapshot,
-  query, doc, deleteDoc
-} from 'firebase/firestore';
-import {
-  getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged
-} from 'firebase/auth';
-import {
-  Globe, MapPin, Sparkles, Compass, X, MessageSquare, Send, ExternalLink
-} from 'lucide-react';
+import React, { useEffect, useState, useRef, useMemo } from "react";
 
-import { firebaseConfig } from './firebaseConfig';
-import { PACKAGES } from './constants/packages';
-import PackageCard from './components/PackageCard';
-import './index.css';
+import {auth, db } from "./firebaseConfig";
+import {
+  collection,
+  addDoc,
+  onSnapshot,
+  query,
+  doc,
+  deleteDoc
+} from "firebase/firestore";
+import {
+  signInAnonymously,
+  signInWithCustomToken,
+  onAuthStateChanged
+} from "firebase/auth";
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+import {
+  Globe,
+  MapPin,
+  Sparkles,
+  Compass,
+  X,
+  MessageSquare,
+  Send,
+  ExternalLink
+} from "lucide-react";
+
+import { PACKAGES } from "./constants/packages";
+import PackageCard from "./components/PackageCard";
+import "./index.css";
+
+
 const appId = 'global-tour-pro-v2';
 const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
